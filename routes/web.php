@@ -11,6 +11,11 @@
 |
 */
 
-Route::get('/welcome', function () {
+Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/dashboard',	['as'=>'admin.dashboard',	'uses'=>'DashboardController@index']);
+Route::get('/teachers',		['as'=>'teachers.list',		'uses'=>'TeachersController@list_teachers']);
+Route::get('/teacher/add',	['as'=>'teacher.add',		'uses'=>'TeachersController@add_teacher']);
