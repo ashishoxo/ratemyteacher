@@ -16,6 +16,22 @@ Route::get('/', function () {
 });
 
 
-Route::get('/dashboard',	['as'=>'admin.dashboard',	'uses'=>'DashboardController@index']);
-Route::get('/teachers',		['as'=>'teachers.list',		'uses'=>'TeachersController@list_teachers']);
-Route::get('/teacher/add',	['as'=>'teacher.add',		'uses'=>'TeachersController@add_teacher']);
+
+Auth::routes();
+Route::get('admin',				['as'=>'admin.login',		'uses'=>'AdminAuth\LoginController@showLoginForm']);
+Route::post('admin',			['as'=>'admin.dologin',		'uses'=>'AdminAuth\LoginController@doLogin']);
+Route::get('admin-register',	['as'=>'admin.register',	'uses'=>'AdminAuth\RegisterController@ShowRegisterForm']);
+Route::post('admin-register',	['as'=>'admin.doregister',	'uses'=>'AdminAuth\RegisterController@create']);
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::group(['middleware'=>'admin'],function(){
+	Route::get('/dashboard',		['as'=>'admin.dashboard',	'uses'=>'DashboardController@index']);
+	Route::get('/teachers',			['as'=>'teachers.list',		'uses'=>'TeachersController@list_teachers']);
+	Route::get('/teacher/add',		['as'=>'teacher.add',		'uses'=>'TeachersController@add_teacher']);	
+});
+Route::group(['middleware'=>'auth'],function(){
+	Route::get('student', function(){
+			echo "This is my admin<a href='/logout'>Logout</a>";
+		});	
+});
