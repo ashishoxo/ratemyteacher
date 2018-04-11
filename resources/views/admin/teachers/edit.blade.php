@@ -1,14 +1,14 @@
 @extends('layouts.main')
 @section('content')
-{!! Form::open(['route'=>'teacher.save']) !!}
+{!! Form::model($model,['route'=>'teacher.save']) !!}
 {!! csrf_field() !!}
 <div>
 	<label>Teacher Name</label>
-	<input type="text" name="name">	
+	<input type="text" name="name" value="{{$model->name}}">	
 </div>
 <div>
 	<label>Department</label>
-	<select name="department">
+	<select name="department" value="{{$model->department}}">
 		<option>Commerce</option>
 		<option>Enginerring</option>
 	</select>	

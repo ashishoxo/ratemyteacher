@@ -9,7 +9,7 @@
 			<li><a><i class="sl sl-icon-envelope-open"></i> Teachers</a>
 				<ul>
 					<li><a href="{{route('teachers.list')}}">All Teachers </a></li>
-					<li><a href="dashboard-my-listings.html">Add Teachers</a></li>
+					<li><a href="{{route('teacher.add')}}">Add Teachers</a></li>
 					
 				</ul>	
 			</li>

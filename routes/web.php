@@ -29,9 +29,13 @@ Route::group(['middleware'=>'admin'],function(){
 	Route::get('/dashboard',		['as'=>'admin.dashboard',	'uses'=>'DashboardController@index']);
 	Route::get('/teachers',			['as'=>'teachers.list',		'uses'=>'TeachersController@list_teachers']);
 	Route::get('/teacher/add',		['as'=>'teacher.add',		'uses'=>'TeachersController@add_teacher']);	
+	Route::get('/teacher/edit/{id}',['as'=>'teacher.edit',		'uses'=>'TeachersController@edit_teacher']);	
+	Route::post('/teacher/save',		['as'=>'teacher.save',		'uses'=>'TeachersController@save_teacher']);	
+
+	Route::resource('users', 'UsersController');
 });
 Route::group(['middleware'=>'auth'],function(){
 	Route::get('student', function(){
-			echo "This is my admin<a href='/logout'>Logout</a>";
-		});	
+		echo "This is my admin<a href='/logout'>Logout</a>";
+	});	
 });
