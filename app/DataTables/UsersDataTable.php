@@ -66,11 +66,11 @@ class UsersDataTable extends DataTable
     protected function getColumns()
     {
         return [
-            'id',
-            'name',
-            'email',
-            'created_at',
-            'updated_at'
+            'id' => ['title' => 'id'],
+            'name'=> ['title' => 'name'],
+            'email'=> ['title' => 'email'],
+            'created_at'=> ['title' => 'created_at'],
+            'updated_at'=> ['title' => 'updated_at']
         ];
     }
 

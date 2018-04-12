@@ -8,7 +8,10 @@
 </div>
 <div>
 	<label>Department</label>
-	{!! Form::select('department',App\department::getDepartment(),null,['placeholder'=>'Select Department']) !!}
+	<select name="department" value="{{$model->department}}">
+		<option>Commerce</option>
+		<option>Enginerring</option>
+	</select>	
 </div>
 <div>
 	<label>Photo</label>

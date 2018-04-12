@@ -8,10 +8,7 @@
 </div>
 <div>
 	<label>Department</label>
-	<select name="department">
-		<option>Commerce</option>
-		<option>Enginerring</option>
-	</select>	
+	{!! Form::select('department',App\department::getDepartment(),null,['placeholder'=>'Select Department']) !!}
 </div>
 <div>
 	<label>Photo</label>

@@ -8,7 +8,7 @@ use App\Teacher;
 class TeachersController extends Controller
 {
     public function list_teachers(){
-    	$model = Teacher::all();
+    	$model = Teacher::with(['department_rel'])->get();
     	return view('admin.teachers.list',['model'=>$model]);
     }
     public function add_teacher(){
