@@ -14,6 +14,10 @@
 <link rel="stylesheet" href="{{asset('css/style.css')}}">
 <link rel="stylesheet" href="{{asset('css/colors/main.css')}}" id="colors">
 
+
+
+
+
 </head>
 
 <body>
@@ -134,6 +138,7 @@
 <!-- Scripts
 ================================================== -->
 <script type="text/javascript" src="{{asset('js/scripts/jquery-2.2.0.min.js')}}"></script>
+
 <script type="text/javascript" src="{{asset('js/scripts/mmenu.min.js')}}"></script>
 <script type="text/javascript" src="{{asset('js/scripts/chosen.min.js')}}"></script>
 <script type="text/javascript" src="{{asset('js/scripts/slick.min.js')}}"></script>
