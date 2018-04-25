@@ -28,7 +28,12 @@
 				</ul>
 			</li>
 			<li><a href="dashboard-bookings.html"><i class="sl sl-icon-star"></i> Ratings</a></li>
-			<li><a href="dashboard-bookings.html"><i class="fa fa-users"></i> users</a></li>
+			<li><a ><i class="fa fa-users"></i> users</a>
+				<ul>
+					<li><a href="{{route('users.list')}}">All Users </a></li>
+					<li><a href="{{route('user.add')}}">Add User</a></li>
+				</ul>
+			</li>
 		</ul>
 		
 		

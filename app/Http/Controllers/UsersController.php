@@ -9,9 +9,14 @@ use App\User;
 
 class UsersController extends Controller
 {
-    public function index(UsersDataTable $dataTable)
+    public function list_users()
     {	
-        return $dataTable->render('users');
+    	$model = User::all();
 
+        return view('admin.users.list',['users'=>$model]);
+    }
+    public function add_user()
+    {
+    	return view('admin.users.add');
     }
 }

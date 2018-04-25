@@ -36,15 +36,20 @@ Route::group(['middleware'=>'admin'],function(){
 	Route::get('/department/edit/{id}',['as'=>'department.edit',		'uses'=>'DepartmentController@edit_department']);	
 	Route::post('/department/save',	['as'=>'department.save',		'uses'=>'DepartmentController@save_department']);
 
-	Route::get('/schedules',['as'=>'schedules.list',		'uses'=>'SchedulesController@list_departments']);
-	Route::get('/schedule/add',	['as'=>'schedule.add',		'uses'=>'SchedulesController@add_schedule']);	
-	Route::get('/schedule/edit/{id}',['as'=>'schedule.edit',		'uses'=>'SchedulesController@edit_schedule']);
-	Route::post('/schedule/save',['as'=>'schedule.save',		'uses'=>'SchedulesController@save_schedule']);
+	Route::get('/schedules',			['as'=>'schedules.list','uses'=>'SchedulesController@list_departments']);
+	Route::get('/schedule/add',			['as'=>'schedule.add',	'uses'=>'SchedulesController@add_schedule']);	
+	Route::get('/schedule/edit/{id}',	['as'=>'schedule.edit',	'uses'=>'SchedulesController@edit_schedule']);
+	Route::post('/schedule/save',		['as'=>'schedule.save',	'uses'=>'SchedulesController@save_schedule']);
+	
+	Route::get('/users',			['as'=>'users.list','uses'=>'UsersController@list_users']);
+	Route::get('/user/add',			['as'=>'user.add',	'uses'=>'UsersController@add_user']);	
+	Route::get('/user/edit/{id}',	['as'=>'user.edit',	'uses'=>'UsersController@edit_user']);
+	Route::post('/user/save',		['as'=>'user.save',	'uses'=>'UsersController@save_user']);
 
-	Route::resource('users', 'UsersController');
 });
 Route::group(['middleware'=>'auth'],function(){
-	Route::get('student', function(){
-		echo "This is my admin<a href='/logout'>Logout</a>";
-	});	
+	Route::get('/profile',			['as'=>'profile.view','uses'=>'ProfileController@view_profile']);
+	Route::get('/profile/edit',		['as'=>'profile.edit','uses'=>'ProfileController@edit_profile']);
+	Route::get('/changepassword',	['as'=>'change.password','uses'=>'ProfileController@change_password']);
+
 });
