@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Schedule;
 use App\Schedule_meta;
+use Carbon\Carbon;
 
 class SchedulesController extends Controller
 {
@@ -15,9 +16,11 @@ class SchedulesController extends Controller
     public function save_schedule(Request $request)
     {	
     	$model = new Schedule;
-    	$model->schedule_type = $request->schedule_type;
+        $model->schedule_type = $request->schedule_type;
+    	$model->date = $request->date;
+
     	$model->save();
-    	foreach ($request->except(['_token', 'schedule_type']) as $key => $value) {
+    	foreach ($request->except(['_token', 'schedule_type','date']) as $key => $value) {
     		$meta = new Schedule_meta;
     		$meta->schedule_id = $model->id;
     		$meta->key = $key;
@@ -26,9 +29,40 @@ class SchedulesController extends Controller
     		$meta->save();	
     	}
     }
-    public function list_departments()
+    public function list_schedules()
     {
     	$model = Schedule::with(['meta'])->get();
     	return view('admin.schedules.list',['schedules'=>$model]);
     }
+
+    public function list_lectures()
+    {   $today = Carbon::now()->format('Y-m-d');
+        $model = Schedule::where([['schedule_type','=','lecture'],['date','=',$today]])->with(['meta'])->get();
+        return view('student.classes.lectures.list',['lectures'=>$model]);
+    }
+    public function list_guest_lectures()
+    {
+        $today = Carbon::now()->format('Y-m-d');
+        $model = Schedule::where([['schedule_type','=','guest_lecture'],['date','=',$today]])->with(['meta'])->get();
+        return view('student.classes.guest-lectures.list',['guest_lectures'=>$model]);
+    }
+    public function list_workshops()
+    {
+        $today = Carbon::now()->format('Y-m-d');
+        $model = Schedule::where([['schedule_type','=','workshop'],['date','=',$today]])->with(['meta'])->get();
+        return view('student.classes.workshops.list',['workshop'=>$model]);
+    }  
+
+    public function rate_lectures($id)
+    {
+        return view('student.classes.lectures.rate');        
+    }
+    public function rate_guest_lectures($id)
+    {
+        return view('student.classes.guest-lectures.rate');        
+    }
+    public function rate_workshops($id)
+    {
+        return view('student.classes.workshops.rate');      
+    }  
 }
