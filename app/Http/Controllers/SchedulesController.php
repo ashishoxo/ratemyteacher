@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Schedule;
 use App\Schedule_meta;
+use App\review;
 use Carbon\Carbon;
 
 class SchedulesController extends Controller
@@ -55,7 +56,20 @@ class SchedulesController extends Controller
 
     public function rate_lectures($id)
     {
-        return view('student.classes.lectures.rate');        
+        $model = Schedule::with(['meta','reviews'])->find($id);
+        
+        return view('student.classes.lectures.rate',['model'=>$model]);        
+    }
+    public function rate_lectures_save(Request $request,$id)
+    {
+        $model = new review;
+        $model->schedule_id = $id;
+        $model->comment = $request->comment;
+        $model->rating = $request->rating;
+        $model->user = $request->user;
+        $model->save();
+        return redirect()->route('lecture.rate',$id);
+
     }
     public function rate_guest_lectures($id)
     {

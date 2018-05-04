@@ -49,6 +49,7 @@ Route::group(['middleware'=>'auth'],function(){
 	Route::get('/profile',				['as'=>'profile.view',		'uses'=>'ProfileController@view_profile']);
 	Route::get('/lectures',				['as'=>'lectures.list',		'uses'=>'SchedulesController@list_lectures']);
 	Route::get('/lecture/rate/{id}',			['as'=>'lecture.rate',		'uses'=>'SchedulesController@rate_lectures']);
+	Route::post('/lecture/rate/{id}',			['as'=>'lecture.saverate',		'uses'=>'SchedulesController@rate_lectures_save']);
 	Route::get('/guest-lectures',		['as'=>'guestlectures.list','uses'=>'SchedulesController@list_guest_lectures']);
 	Route::get('/guest-lecture/rate/{id}',	['as'=>'guestlectures.rate','uses'=>'SchedulesController@rate_guest_lectures']);
 	Route::get('/workshops',			['as'=>'workshops.list',	'uses'=>'SchedulesController@list_workshops']);
