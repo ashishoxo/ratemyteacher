@@ -53,6 +53,6 @@ Route::group(['middleware'=>'auth'],function(){
 	Route::get('/guest-lectures',		['as'=>'guestlectures.list','uses'=>'SchedulesController@list_guest_lectures']);
 	Route::get('/guest-lecture/rate/{id}',	['as'=>'guestlectures.rate','uses'=>'SchedulesController@rate_guest_lectures']);
 	Route::get('/workshops',			['as'=>'workshops.list',	'uses'=>'SchedulesController@list_workshops']);
-	Route::get('/workshop/rate/{id}',		['as'=>'workshops.rate',	'uses'=>'SchedulesController@rate_workshops']);
+	Route::get('/workshop/rate/{id}',		['as'=>'workshop.rate',	'uses'=>'SchedulesController@rate_workshops']);
 	
 });

@@ -1,9 +1,5 @@
 @extends('layouts.student')
 @section('content')
-
-
-
-
 <div class="card">
     <div class="card-body">
         <h4 class="card-title">
@@ -33,7 +29,7 @@
 						<td>{{$value->value}}</td>
 					@endforeach
 						<td>
-							<a type="button" class="btn btn-secondary btn-fw" href="{{route('lecture.rate',$values->id)}}"><i class="mdi mdi-cloud-download"></i>Rate it</a>
+							<a type="button" class="btn btn-secondary btn-fw" href="{{route('workshop.rate',$values->id)}}"><i class="mdi mdi-cloud-download"></i>Rate it</a>
 							
 						</td>
 					</tr>

@@ -107,7 +107,7 @@
                         
                         <li class="nav-item dropdown d-none d-xl-inline-block">
                             <a class="nav-link dropdown-toggle" id="UserDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
-                                <span class="mr-3">Hello, Rahul Kumar !</span><img class="img-xs rounded-circle" src="<?php echo e(asset('assets/images/faces/face1.jpg')); ?>" alt="Profile image">
+                                <span class="mr-3">Hello, <?php echo e(Auth::user()->name); ?> !</span><img class="img-xs rounded-circle" src="<?php echo e(asset('assets/images/faces/face1.jpg')); ?>" alt="Profile image">
                             </a>
                             <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
                                 <a class="dropdown-item">

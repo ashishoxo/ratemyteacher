@@ -1,8 +1,4 @@
 <?php $__env->startSection('content'); ?>
-
-
-
-
 <div class="card">
     <div class="card-body">
         <h4 class="card-title">
@@ -32,7 +28,7 @@
 						<td><?php echo e($value->value); ?></td>
 					<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 						<td>
-							<a type="button" class="btn btn-secondary btn-fw" href="<?php echo e(route('lecture.rate',$values->id)); ?>"><i class="mdi mdi-cloud-download"></i>Rate it</a>
+							<a type="button" class="btn btn-secondary btn-fw" href="<?php echo e(route('workshop.rate',$values->id)); ?>"><i class="mdi mdi-cloud-download"></i>Rate it</a>
 							
 						</td>
 					</tr>

@@ -73,10 +73,12 @@ class SchedulesController extends Controller
     }
     public function rate_guest_lectures($id)
     {
-        return view('student.classes.guest-lectures.rate');        
+        $model = Schedule::with(['meta','reviews'])->find($id);
+        return view('student.classes.guest-lectures.rate',['model'=>$model]);        
     }
     public function rate_workshops($id)
     {
-        return view('student.classes.workshops.rate');      
+        $model = Schedule::with(['meta','reviews'])->find($id);
+        return view('student.classes.workshops.rate',['model'=>$model]);      
     }  
 }

@@ -8,7 +8,7 @@
                 </div>
                 <div class="profile-name">
                     <p class="name">
-                        Rahul Kumar | Admin
+                        {{Auth::user()->name}} | Student
                     </p>
                 </div>
                 <div class="notification-panel mt-4">

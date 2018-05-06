@@ -13,7 +13,7 @@
 				<tr>
 					<th>Topic</th>
 					<th>Subject</th>
-					<th>Date</th>
+					
 					<th>Time</th>
 					<th>teacher</th>
 					<th>company</th>

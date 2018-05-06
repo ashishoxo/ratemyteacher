@@ -124,7 +124,7 @@
 			<button>Submit</button>
 		{!! Form::close() !!}
 
-		<div class="col-12">
+		<div class="col-12 " style="margin-top: 30px;">
 			@foreach($model->reviews as $key => $value)
 		    <div class="d-flex align-items-start pb-3 border-bottom" style="position: relative;">
 		        <img src="../../images/samples/profile_page/logo/01.png" alt="User img">
