@@ -1,30 +1,39 @@
 @extends('layouts.student')
 @section('content')
-	<div class="dashboard-list-box margin-top-0">
-	<h4>Lectures</h4>
-	<ul>
-		@foreach($lectures as $key => $values)
-		<li>
-			
-			<div class="list-box-listing">
-				
-				<div class="list-box-listing-content">
-					<div class="inner">
-						@foreach($values->meta as $key => $value)
-							<span style="margin-right: 20px;">{{$value->value}}</span>
-						@endforeach
-					</div>
-				</div>
-			</div>
-			<div class="buttons-to-right">
-				<a href="{{route('lecture.rate',$values->id)}}" class="button gray"><i class="sl sl-icon-note"></i> Rate</a>
-				{{-- <a href="#" class="button gray"><i class="sl sl-icon-close"></i> Delete</a> --}}
-			</div>
-
-			
-		</li>
-		@endforeach
-		
-	</ul>
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title">
+            Today's Lectures
+        </h4>
+        <p class="card-description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+        <table class="table table-striped">
+			<thead>
+				<tr>
+					<th>Topic</th>
+					<th>Subject</th>
+					<th>Date</th>
+					<th>Time</th>
+					<th>teacher</th>
+					<th>company</th>
+					<th>Actions</th>
+				</tr>
+			</thead>
+			<tbody>
+				@foreach($lectures as $key => $values)
+					<tr>
+					@foreach($values->meta as $key => $value)
+						<td>{{$value->value}}</td>
+					@endforeach
+						<td>
+							<a type="button" class="btn btn-secondary btn-fw" href="{{route('lecture.rate',$values->id)}}"><i class="mdi mdi-cloud-download"></i>Rate it</a>
+							
+						</td>
+					</tr>
+				@endforeach
+			</tbody>
+        </table>
+    </div>
 </div>
 @endsection

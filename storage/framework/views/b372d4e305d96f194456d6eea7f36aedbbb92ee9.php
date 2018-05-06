@@ -1,58 +1,5 @@
-@extends('layouts.student')
-@section('content')
-	{{-- 
-	<div>
-		@foreach($model->meta as $key => $value)
-		<div>
-			{{$value->key}}		
-		</div>
-		<div>
-			{{$value->value}}
-		</div>
-		@endforeach
-	</div>
-
-	<div>
-		
-		{!! Form::open(['route'=>['lecture.saverate','id'=>request()->route()->parameters()['id']],'method'=>'post']) !!}
-		{!! csrf_field() !!}
-			comment
-			<textarea name="comment"></textarea>
-			
-			<div class="rating">
-				<span data-value="5">☆</span>
-				<span data-value="4">☆</span>
-				<span data-value="3">☆</span>
-				<span data-value="2">☆</span>
-				<span data-value="1">☆</span>
-			</div>
-			<input type="hidden" name="rating" value="">
-			<input type="hidden" name="user" value="{{Auth::user()->name}}">
-			<button>Submit</button>
-		{!! Form::close() !!}
-	</div>
-	<div>
-
-		comments are:
-		@foreach($model->reviews as $key => $value)
-		<div>
-			{{$value->comment}}		
-		</div>
-
-		<div>
-			
-			<div class="rating" data-value="">
-				<span class="{{ ($value->rating >= 5) ? 'active' : '' }}">☆</span>
-				<span class="{{ ($value->rating >= 4) ? 'active' : '' }}">☆</span>
-				<span class="{{ ($value->rating >= 3) ? 'active' : '' }}">☆</span>
-				<span class="{{ ($value->rating >= 2) ? 'active' : '' }}">☆</span>
-				<span class="{{ ($value->rating >= 1) ? 'active' : '' }}">☆</span>
-			</div>
-		</div>
-		@endforeach
-		
-			
-	</div> --}}
+<?php $__env->startSection('content'); ?>
+	
 	
 	<style type="text/css">
 		
@@ -92,20 +39,23 @@
         </p>
         <table class="table table-striped">
 			<tbody>
-				@foreach($model->meta as $key => $value)
+				<?php $__currentLoopData = $model->meta; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $value): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 				<tr>
 					<th>
-						{{$value->key}}		
+						<?php echo e($value->key); ?>		
 					</th>
 					<td>
-						{{$value->value}}
+						<?php echo e($value->value); ?>
+
 					</td>
 				</tr>
-				@endforeach
+				<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 			</tbody>
         </table>
-		{!! Form::open(['route'=>['lecture.saverate','id'=>request()->route()->parameters()['id']],'method'=>'post']) !!}
-			{!! csrf_field() !!}
+		<?php echo Form::open(['route'=>['lecture.saverate','id'=>request()->route()->parameters()['id']],'method'=>'post']); ?>
+
+			<?php echo csrf_field(); ?>
+
 			<div class="form-group" style="margin-top: 30px">
 				<label for="exampleInputEmail1">Write Your Comment</label>
 				<textarea rows="10" name="comment" class="form-control" id="exampleInputEmail1" placeholder="Write Your Comment"></textarea>
@@ -119,32 +69,34 @@
 				<span data-value="1">☆</span>
 			</div>
 			<input type="hidden" name="rating" value="">
-			<input type="hidden" name="user" value="{{Auth::user()->name}}">
+			<input type="hidden" name="user" value="<?php echo e(Auth::user()->name); ?>">
 			<br><br><br>
 			<button>Submit</button>
-		{!! Form::close() !!}
+		<?php echo Form::close(); ?>
+
 
 		<div class="col-12">
-			@foreach($model->reviews as $key => $value)
+			<?php $__currentLoopData = $model->reviews; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $value): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 		    <div class="d-flex align-items-start pb-3 border-bottom" style="position: relative;">
 		        <img src="../../images/samples/profile_page/logo/01.png" alt="User img">
 		        <div class="wrapper pl-4">
 		            <p class="font-weight-bold mb-0">
-		                {{$value->user}}
+		                <?php echo e($value->user); ?>
+
 		            </p>
-		            <small>{{$value->comment}}</small>
+		            <small><?php echo e($value->comment); ?></small>
 		            <div style="position: absolute;right: 0;top: 0">
 		            	<div class="rating" data-value="">
-							<span class="{{ ($value->rating >= 5) ? 'active' : '' }}">☆</span>
-							<span class="{{ ($value->rating >= 4) ? 'active' : '' }}">☆</span>
-							<span class="{{ ($value->rating >= 3) ? 'active' : '' }}">☆</span>
-							<span class="{{ ($value->rating >= 2) ? 'active' : '' }}">☆</span>
-							<span class="{{ ($value->rating >= 1) ? 'active' : '' }}">☆</span>
+							<span class="<?php echo e(($value->rating >= 5) ? 'active' : ''); ?>">☆</span>
+							<span class="<?php echo e(($value->rating >= 4) ? 'active' : ''); ?>">☆</span>
+							<span class="<?php echo e(($value->rating >= 3) ? 'active' : ''); ?>">☆</span>
+							<span class="<?php echo e(($value->rating >= 2) ? 'active' : ''); ?>">☆</span>
+							<span class="<?php echo e(($value->rating >= 1) ? 'active' : ''); ?>">☆</span>
 						</div>
 		            </div>
 		        </div>
 		    </div>
-		    @endforeach
+		    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 		    
 		    
 		</div>
@@ -164,4 +116,5 @@
 			})
 		})
 	</script>
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.student', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
