@@ -1,29 +1,53 @@
 @extends('layouts.main')
 @section('content')
-	<div class="col-lg-12 col-md-12">
-		<div class="dashboard-list-box margin-top-0">
-			<h4>Students / Users</h4>
-			<ul>
-				@foreach($users as $key => $value)
-				<li>
-					<div class="list-box-listing">
-						<div class="list-box-listing-img"><a href="#"><img src="images/listing-item-02.jpg" alt=""></a></div>
-						<div class="list-box-listing-content">
-							<div class="inner">
-								<h3>{{$value->name}}<span style="display: inline-block;background: green;color: white;padding: 5px 10px;">{{$value->username}}</span></h3>
-								<span>Bishop Avenue, New York</span>
-								
-							</div>
-						</div>
-					</div>
-					<div class="buttons-to-right">
-						<a href="#" class="button gray"><i class="sl sl-icon-close"></i> Edit</a>
-						<a href="#" class="button gray"><i class="sl sl-icon-close"></i> Delete</a>
-					</div>
-				</li>
-				@endforeach
-
-			</ul>
-		</div>
-	</div>
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title">
+            All Students
+        </h4>
+        <p class="card-description">
+            This list contains all the students of an institution
+        </p>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                	<th>
+                        Profile Picture
+                    </th>
+                    <th>
+                        Name
+                    </th>
+                    <th>
+                        Roll no
+                    </th>
+                    <th>
+                        Actions
+                    </th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+            	@foreach($users as $key => $value)
+                <tr>
+                    <td class="py-1">
+                        <img src="../../images/faces-clipart/pic-1.png" alt="image">
+                    </td>
+                    <td>
+                        {{$value->name}}
+                    </td>
+                    <td>
+                        {{$value->username}}
+                    </td>
+                    <td>
+                        <a type="button" class="btn btn-secondary btn-fw" href=""><i class="mdi mdi-cloud-download"></i>Edit</a>
+                        <a type="button" class="btn btn-danger btn-fw"><i class="mdi mdi-cloud-download"></i>Delete</a>
+                    </td>
+                </tr>
+                @endforeach
+                
+            </tbody>
+        </table>
+    </div>
+</div>
+	
 @endsection
