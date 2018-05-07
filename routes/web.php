@@ -30,6 +30,7 @@ Route::group(['middleware'=>'admin'],function(){
 	Route::get('/teachers',				['as'=>'teachers.list',		'uses'=>'TeachersController@list_teachers']);
 	Route::get('/teacher/add',			['as'=>'teacher.add',		'uses'=>'TeachersController@add_teacher']);	
 	Route::get('/teacher/edit/{id}',	['as'=>'teacher.edit',		'uses'=>'TeachersController@edit_teacher']);
+	Route::get('/teacher/ratings/{id}',	['as'=>'teacher.ratings',		'uses'=>'TeachersController@ratings_teacher']);
 	Route::post('/teacher/save',		['as'=>'teacher.save',		'uses'=>'TeachersController@save_teacher']);
 	Route::get('/departments',			['as'=>'departments.list',	'uses'=>'DepartmentController@list_departments']);
 	Route::get('/department/add',		['as'=>'department.add',	'uses'=>'DepartmentController@add_department']);	
@@ -54,5 +55,8 @@ Route::group(['middleware'=>'auth'],function(){
 	Route::get('/guest-lecture/rate/{id}',	['as'=>'guestlectures.rate','uses'=>'SchedulesController@rate_guest_lectures']);
 	Route::get('/workshops',			['as'=>'workshops.list',	'uses'=>'SchedulesController@list_workshops']);
 	Route::get('/workshop/rate/{id}',		['as'=>'workshop.rate',	'uses'=>'SchedulesController@rate_workshops']);
+	Route::get('/my-teachers',		['as'=>'my.teachers',	'uses'=>'TeachersController@list_teachers_for_student']);
+	Route::get('/teacher/rate/{id}',		['as'=>'rate.teacher',	'uses'=>'TeachersController@rate_teacher']);
+	Route::post('/teacher/review/{id}',		['as'=>'review.teacher',	'uses'=>'TeachersController@review_teacher']);
 	
 });

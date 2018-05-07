@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts.student')
 @section('content')
 <div class="card">
     <div class="card-body">
@@ -20,9 +20,9 @@
                     <th>
                         Department
                     </th>
-                    <th>
+                    {{-- <th>
                         Registered On
-                    </th>
+                    </th> --}}
                     <th>
                         Actions
                     </th>
@@ -40,13 +40,12 @@
                     <td>
                         {{$teacher->department_rel->name}}
                     </td>
-                    <td>
+                    {{-- <td>
                         23 days ago
-                    </td>
+                    </td> --}}
                     <td>
-                        <a type="button" class="btn btn-secondary btn-fw" href="{{route('teacher.ratings',[$teacher->id])}}"><i class="mdi mdi-cloud-download"></i>View Ratings</a>
-                        <a type="button" class="btn btn-secondary btn-fw" href="{{route('teacher.edit',[$teacher->id])}}"><i class="mdi mdi-cloud-download"></i>Edit</a>
-                        <a type="button" class="btn btn-danger btn-fw"><i class="mdi mdi-cloud-download"></i>Delete</a>
+                        <a type="button" class="btn btn-secondary btn-fw" href="{{route('rate.teacher',[$teacher->id])}}"><i class="mdi mdi-cloud-download"></i>Rate</a>
+                        
                     </td>
                 </tr>
                 @endforeach

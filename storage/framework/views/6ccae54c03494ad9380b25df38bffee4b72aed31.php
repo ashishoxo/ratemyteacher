@@ -45,6 +45,7 @@
                         23 days ago
                     </td>
                     <td>
+                        <a type="button" class="btn btn-secondary btn-fw" href="<?php echo e(route('teacher.ratings',[$teacher->id])); ?>"><i class="mdi mdi-cloud-download"></i>View Ratings</a>
                         <a type="button" class="btn btn-secondary btn-fw" href="<?php echo e(route('teacher.edit',[$teacher->id])); ?>"><i class="mdi mdi-cloud-download"></i>Edit</a>
                         <a type="button" class="btn btn-danger btn-fw"><i class="mdi mdi-cloud-download"></i>Delete</a>
                     </td>
