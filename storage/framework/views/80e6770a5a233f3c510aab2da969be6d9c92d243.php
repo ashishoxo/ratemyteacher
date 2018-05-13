@@ -8,11 +8,11 @@
             Rate My Teacher | Rating Application
         </title>
         <!-- plugins:css -->
-        <link rel="stylesheet" href="{{asset('assets/css/iconfonts/mdi/css/materialdesignicons.min.css')}}">
+        <link rel="stylesheet" href="<?php echo e(asset('assets/css/iconfonts/mdi/css/materialdesignicons.min.css')); ?>">
         <!-- inject:css -->
-        <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
+        <link rel="stylesheet" href="<?php echo e(asset('assets/css/style.css')); ?>">
         <!-- endinject -->
-        <link rel="shortcut icon" href="{{asset('assets/images/favicon.png')}}" />
+        <link rel="shortcut icon" href="<?php echo e(asset('assets/images/favicon.png')); ?>" />
     </head>
     <body>
         <div class="container-scroller">
@@ -107,7 +107,7 @@
                         
                         <li class="nav-item dropdown d-none d-xl-inline-block">
                             <a class="nav-link dropdown-toggle" id="UserDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
-                                <span class="mr-3">Hello, {{Auth::user()->name}} !</span><img class="img-xs rounded-circle" src="{{asset('assets/images/faces/face1.jpg')}}" alt="Profile image">
+                                <span class="mr-3">Hello, <?php echo e(Auth::user()->name); ?> !</span><img class="img-xs rounded-circle" src="<?php echo e(asset('assets/images/faces/face1.jpg')); ?>" alt="Profile image">
                             </a>
                             <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
                                 <a class="dropdown-item">
@@ -119,15 +119,16 @@
                                 <a class="dropdown-item">
                                     Change Password
                                 </a>
-                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                <a class="dropdown-item" href="<?php echo e(route('logout')); ?>"
                                             onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                     Sign Out
                                 </a>
                                 
 
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                    {{csrf_field() }}
+                                <form id="logout-form" action="<?php echo e(route('logout')); ?>" method="POST" style="display: none;">
+                                    <?php echo e(csrf_field()); ?>
+
                                 </form>
                             </div>
                         </li>
@@ -140,12 +141,12 @@
             <!-- partial -->
             <div class="container-fluid page-body-wrapper">
                <!-- partial:partials/_sidebar.html -->
-                @include('components.student-sidenav')
+                <?php echo $__env->make('components.student-sidenav', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
                 
                 <!-- partial -->
                 <div class="main-panel">
                     <div class="content-wrapper">
-                        @yield('content')
+                        <?php echo $__env->yieldContent('content'); ?>
                         
                     </div>
                     <!-- content-wrapper ends -->
@@ -165,11 +166,11 @@
         </div>
         
         
-        <script src="{{asset('assets/js/vendor.bundle.base.js')}}"></script><!-- green color chart on dashboard -->
-        <script src="{{asset('assets/js/vendor.bundle.addons.js')}}"></script><!-- green color chart on dashboard -->
+        <script src="<?php echo e(asset('assets/js/vendor.bundle.base.js')); ?>"></script><!-- green color chart on dashboard -->
+        <script src="<?php echo e(asset('assets/js/vendor.bundle.addons.js')); ?>"></script><!-- green color chart on dashboard -->
         
         
-        <script src="{{asset('assets/js/dashboard.js')}}"></script>
+        <script src="<?php echo e(asset('assets/js/dashboard.js')); ?>"></script>
         
     </body>
 </html>
