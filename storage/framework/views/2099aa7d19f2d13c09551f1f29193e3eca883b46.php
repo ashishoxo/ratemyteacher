@@ -16,11 +16,7 @@
                             <div class="col-md-6">
                                 <input id="email" type="text" class="form-control" name="username" value="<?php echo e(old('email')); ?>" required autofocus>
 
-                                <?php if($errors->has('email')): ?>
-                                    <span class="help-block">
-                                        <strong><?php echo e($errors->first('email')); ?></strong>
-                                    </span>
-                                <?php endif; ?>
+                              
                             </div>
                         </div>
 
