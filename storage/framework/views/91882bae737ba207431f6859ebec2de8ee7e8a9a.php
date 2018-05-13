@@ -35,7 +35,7 @@
 				<!-- Logo -->
 				<div id="logo">
 					<h3>RATE MY TEACHER</h3>
-					{{-- <a href=""><img src="images/logo.png" alt=""></a> --}}
+					
 				</div>
 
 				<!-- Mobile Navigation -->
@@ -55,7 +55,7 @@
 			<!-- Right Side Content / End -->
 			<div class="right-side">
 				<div class="header-widget">
-					<a href="{{route('admin.login')}}" class="sign-in popup-with-zoom-anim"><i class="sl sl-icon-login"></i> Sign In</a>
+					<a href="<?php echo e(route('admin.login')); ?>" class="sign-in popup-with-zoom-anim"><i class="sl sl-icon-login"></i> Sign In</a>
 				</div>
 			</div>
 			<!-- Right Side Content / End -->
@@ -158,7 +158,7 @@
 
 </header>
 
-@yield('content')
+<?php echo $__env->yieldContent('content'); ?>
 <!-- Footer
 ================================================== -->
 <div >
