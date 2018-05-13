@@ -255,7 +255,7 @@
                         <!-- list person -->
                         <li class="chat-persons">
                             <a href="#">
-                                <span class="pro-pic"><img src="images/faces/face23.jpg" alt="profile image"></span>
+                                <span class="pro-pic"><img src="images/happy-client-02.jpg" alt="profile image"></span>
                                 <div class="user">
                                     <p class="u-name">
                                         Marina Michel

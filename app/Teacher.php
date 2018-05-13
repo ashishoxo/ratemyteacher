@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Teacher extends Model
 {
-    protected $fillable = ['name','department','pic'];
+    protected $fillable = ['name','department'];
 
     public function department_rel(){
     	return $this->belongsTo('App\department','department','id');

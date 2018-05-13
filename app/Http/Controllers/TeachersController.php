@@ -16,9 +16,12 @@ class TeachersController extends Controller
     	return view('admin.teachers.add');
     }
     public function save_teacher(Request $request)
-    {
+    {   
+        $photoName = time().'.'.$request->pic->getClientOriginalExtension();
+        $request->pic->move(public_path('avatars'), $photoName);
     	$model = new Teacher;
-        $model->fill($request->except(['_token']));
+        $model->pic = $photoName;
+        $model->fill($request->except(['_token','pic']));
         $model->save();
     	return redirect()->route('teachers.list');
     }
@@ -52,5 +55,15 @@ class TeachersController extends Controller
         $model = ReviewTeacher::where('teacher_id',$id)->get();
         // dd($model);
         return view('admin.teachers.ratings',['model'=>$model]);   
+    }
+    public function update_teacher(Request $request,$id)
+    {
+        $photoName = time().'.'.$request->pic->getClientOriginalExtension();
+        $request->pic->move(public_path('avatars'), $photoName);
+        $model = Teacher::find($id);
+        $model->pic = $photoName;
+        $model->fill($request->except(['_token','pic']));
+        $model->save();
+        return redirect()->route('teachers.list');
     }
 }

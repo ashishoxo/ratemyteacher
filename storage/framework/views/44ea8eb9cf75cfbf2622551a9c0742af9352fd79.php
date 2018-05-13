@@ -1,401 +1,208 @@
-<?php $__env->startSection('content'); ?>
-<!-- Banner
-================================================== -->
-<div class="main-search-container" data-background-image="<?php echo e(asset('images/main-search-background-01.jpg')); ?>">
-    <div class="main-search-inner">
 
-        <div class="container">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>RATE MY TEACHER</title>
+
+    
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:100,300,400">
+    <link rel="manifest" href="/manifest.json" >
+    <link rel="stylesheet" type="text/css" href="https://cdn.aioneframework.com/assets/css/aione.min.css">
+    <link rel="stylesheet" type="text/css" href="https://blackrockdigital.github.io/startbootstrap-new-age/device-mockups/device-mockups.min.css">
+
+
+    <script type="text/javascript" src="https://cdn.aioneframework.com/assets/js/vendor.min.js"></script>
+    <script type="text/javascript" src="https://cdn.aioneframework.com/assets/js/aione.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <style type="text/css">
+        .aione-header.light, .page-footer .aione-header.footer-copyright{
+            background: transparent;
+        }
+        .aione-nav.horizontal{
+            border:none;
+        }
+        .aione-nav ul li a{
+            color: white
+        }
+        .special-button{
+                color: #fff;
+    border: 1px solid;
+    border-color: #fff;
+        border-radius: 300px;
+    font-family: Lato,Helvetica,Arial,sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+        display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+        font-size: 11px;
+    padding: 15px 45px;
+    background: transparent;
+        }
+        .special-button:hover{
+            border: 1px solid;
+                color: #fff;
+    border-color: #fdcc52;
+    background-color: #fdcc52;
+        }
+    </style>
+</head>
+<body>
+    <div id="aione_wrapper" class="aione-wrapper page-home layout-header-top aione-layout-wide aione-theme-arcane position-relative">
+        <div class="wrapper">
             
-        </div>
+            <div id="aione_main p-0" class="aione-main fullwidth" style="padding: 0" >
+                <div class="wrapper">
+                    <div id="aione_content" class="aione-content">
+                        <div class="wrapper">
+                            <div id="aione_page_content" class="aione-page-content m-0">
+                                <div class="wrapper">
+                                    <div class="" style="background: url(bg-pattern.png),linear-gradient(to left,#7b4397,#dc2430);min-height: 700px">
+                                        <div class="ar ph-100 pt-100">
+                                            <div class="ac l50 p-50 pt-40">
+                                                <div class="font-size-40 white font-weight-300 line-height-60"> Welcome to Rate Your Lecture! <br>
+                                                Helping students and teachers make informed decisions within education</div>
+                                                
+                                            </div>
+                                            <div class="ac l50 ph-50">
+                                                <div class="device-container ph-100">
+                                                  <div class="device-mockup iphone6_plus portrait white">
+                                                    <div class="device">
+                                                      <div class="screen">
+                                                       
+                                                        <img src=" " class="img-fluid" alt="">
+                                                      </div>
+                                                      <div class="button">
+                                                        
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bg-amber p-100" id="section1">
+                                        <div class="font-size-52 aione-align-center grey darken-4 font-weight-300 line-height-70">
+                                            Let your teacher be happy with your feedback !
+                                        </div>
+                                        <p class="aione-align-center grey darken-4 line-height-60">Our app is available on any mobile device! Download now to get started!</p>
+                                        <div class="aione-align-center">
+                                            <img src="https://blackrockdigital.github.io/startbootstrap-new-age/img/google-play-badge.svg" style="height: 40px">
+                                            <img src="https://blackrockdigital.github.io/startbootstrap-new-age/img/app-store-badge.svg" style="height: 40px">
+                                        </div>
+                                    </div>
+                                    <div class="p-100" id="about">
+                                        <div class="font-size-44 aione-align-center font-weight-300">We value your feedback</div>
+                                        <p class="aione-align-center grey darken-4 line-height-60">Check out what you can do with this app !</p>
+                                        <div class="ar">
+                                            <div class="ac l33">
+                                                <div class="device-container p-30">
+                                                  <div class="device-mockup iphone6_plus portrait white">
+                                                    <div class="device">
+                                                      <div class="screen">
+                                                       
+                                                        <img src="" class="img-fluid" alt="">
+                                                      </div>
+                                                      <div class="button">
+                                                        
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                            </div>
+                                            <div class="ac l33 pv-50">
+                                                <div class="mb-70 aione-align-center">
+                                                    <i class="ion-iphone darken-4 purple font-size-70 "></i>
+                                                    <div class="font-size-36 font-weight-300 line-height-60">
+                                                        lorem ipsum
+                                                    </div>
+                                                    <p class="line-height-20"> lorem ipsum</p>
+                                                </div>
+                                                <div class=" aione-align-center">
+                                                    <i class="ion-cube darken-4 purple font-size-70 ">  </i>
+                                                    <div class="font-size-36 font-weight-300 line-height-60">
+                                                        Free to Use
+                                                    </div>
+                                                    <p class="line-height-20">Free to use and is cross platform application!</p>
+                                                </div>
+                                            </div>
+                                            <div class="ac l33 pv-50">
+                                                <div class="mb-70 aione-align-center">
+                                                    <i class="ion-camera darken-4 purple font-size-70 "></i>
+                                                    <div class="font-size-36 font-weight-300 line-height-60">
+                                                        lorem ipsum
+                                                    </div>
+                                                    <p class="line-height-20"> lorem ipsum</p><br>
+                                                </div>
+                                                <div class=" aione-align-center">
+                                                    <i class="ion-unlocked darken-4 purple font-size-70 "></i>
+                                                    <div class="font-size-36 font-weight-300 line-height-60">
+                                                        lorem ipsum
+                                                    </div>
+                                                    <p class="line-height-20"> lorem ipsum</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="p-100 position-relative" style="background-image: url(https://blackrockdigital.github.io/startbootstrap-new-age/img/bg-cta.jpg);min-height: 740px;background-size: cover;">
+                                        <div class="position-absolute font-size-60 white font-weight-300 line-height-85" style="top:30%">
+                                            Stop waiting.<br>
+                                            Start Rating.<br>
+                                            <button class="special-button">LETS GET STARTED</button>
+                                        </div>
 
-    </div>
-</div>
-
-
-<!-- Content
-================================================== -->
-<div class="container">
-    <div class="row">
-
-        <div class="col-md-12">
-            <h3 class="headline centered margin-top-75">
-                Popular Categories
-                <span>Browse <i>the most desirable</i> categories</span>
-            </h3>
-        </div>
-
-    </div>
-</div>
-
-
-<!-- Categories Carousel -->
-<div class="fullwidth-carousel-container margin-top-25">
-    <div class="fullwidth-slick-carousel category-carousel">
-
-        <!-- Item -->
-        <div class="fw-carousel-item">
-
-            <!-- this (first) box will be hidden under 1680px resolution -->
-            <div class="category-box-container half">
-                <a href="listings-half-screen-map-grid-1.html" class="category-box" data-background-image="<?php echo e(asset('images/category-box-01.jpg')); ?>">
-                    <div class="category-box-content">
-                        <h3>Hotels</h3>
-                        <span>64 listings</span>
-                    </div>
-                    <span class="category-box-btn">Browse</span>
-                </a>
-            </div>
-
-            <div class="category-box-container half">
-                <a href="listings-half-screen-map-grid-1.html" class="category-box" data-background-image="<?php echo e(asset('images/category-box-02.jpg')); ?>">
-                    <div class="category-box-content">
-                        <h3>Shops</h3>
-                        <span>14 listings</span>
-                    </div>
-                    <span class="category-box-btn">Browse</span>
-                </a>
-            </div>
-        </div>
-
-        <!-- Item -->
-        <div class="fw-carousel-item">
-            <div class="category-box-container">
-                <a href="listings-half-screen-map-grid-1.html" class="category-box" data-background-image="<?php echo e(asset('images/category-box-03.jpg')); ?>">
-                    <div class="category-box-content">
-                        <h3>Events</h3>
-                        <span>67 listings</span>
-                    </div>
-                    <span class="category-box-btn">Browse</span>
-                </a>
-            </div>
-        </div>
-
-        <!-- Item -->
-        <div class="fw-carousel-item">
-            <div class="category-box-container">
-                <a href="listings-half-screen-map-grid-1.html" class="category-box" data-background-image="<?php echo e(asset('images/category-box-04.jpg')); ?>">
-                    <div class="category-box-content">
-                        <h3>Fitness</h3>
-                        <span>27 listings</span>
-                    </div>
-                    <span class="category-box-btn">Browse</span>
-                </a>
-            </div>
-        </div>
-
-        <!-- Item -->
-        <div class="fw-carousel-item">
-            <div class="category-box-container">
-                <a href="listings-half-screen-map-list.html" class="category-box" data-background-image="<?php echo e(asset('images/category-box-05.jpg')); ?>">
-                    <div class="category-box-content">
-                        <h3>Nightlife</h3>
-                        <span>22 listings</span>
-                    </div>
-                    <span class="category-box-btn">Browse</span>
-                </a>
-            </div>
-        </div>
-
-        <!-- Item -->
-        <div class="fw-carousel-item">
-            <div class="category-box-container">
-                <a href="listings-half-screen-map-list.html" class="category-box" data-background-image="<?php echo e(asset('images/category-box-06.jpg')); ?>">
-                    <div class="category-box-content">
-                        <h3>Eat & Drink</h3>
-                        <span>130 listings</span>
-                    </div>
-                    <span class="category-box-btn">Browse</span>
-                </a>
-            </div>
-        </div>
-
-    </div>
-</div>
-<!-- Categories Carousel / End -->
-
-
-
-<!-- Fullwidth Section -->
-<section class="fullwidth margin-top-65 padding-top-75 padding-bottom-70" data-background-color="#f8f8f8">
-
-    <div class="container">
-        <div class="row">
-
-            <div class="col-md-12">
-                <h3 class="headline centered margin-bottom-45">
-                    Most Visited Places
-                    <span>Discover top-rated local businesses</span>
-                </h3>
-            </div>
-
-            <div class="col-md-12">
-                <div class="simple-slick-carousel dots-nav">
-
-                <!-- Listing Item -->
-                <div class="carousel-item">
-                    <a href="listings-single-page.html" class="listing-item-container">
-                        <div class="listing-item">
-                            <img src="<?php echo e(asset('images/listing-item-01.jpg')); ?>" alt="">
-
-                            <div class="listing-badge now-open">Now Open</div>
-                            
-                            <div class="listing-item-content">
-                                <span class="tag">Eat & Drink</span>
-                                <h3>Tom's Restaurant <i class="verified-icon"></i></h3>
-                                <span>964 School Street, New York</span>
+                                        
+                                    </div>
+                                    <div class="bg-amber p-100 ">
+                                        <div class="font-size-52 aione-align-center grey darken-4 font-weight-300 line-height-70">
+                                            We <i class="fa fa-heart font-size-52 line-height-70 red"></i> new friends!
+                                        </div>
+                                        <div class="aione-align-center">
+                                            
+                                                <i class="fa fa-twitter font-size-40  bg-white circle line-height-70 white mr-10 mt-20  " style="width: 70px;background-color: #1da1f2"></i>
+                                            
+                                                <i class="bg-white circle fa fa-facebook font-size-40 line-height-70 white mr-10 mt-20  " style="width: 70px;background-color:#3b5998" ></i>
+                                            
+                                                <i class="fa fa-google-plus bg-white circle font-size-40 line-height-70 white mr-10 mt-20   " style="width: 70px;background-color: #dd4b39"></i>
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="bg-white p-100 " id="team">
+                                        <div class="font-size-52 aione-align-center grey darken-4 font-weight-300 line-height-70">
+                                        <i class="fa fa-headphones font-size-52 line-height-70 red"></i> Team
+                                        </div>
+                                        <div class="ar l100 m 100 s100 p-20 ml-40p ">
+                                            
+                                                
+                                                <div class="">
+                                                <img class="circle aione-border" src="rahull.jpg" style="width: 200px"> <br>
+                                                <h4 class="ml-10p"> Rahul</h4>
+                                                <a href="https://github.com/prodigl"><p class="purple ml-10p">Github </p></a>
+                                                </div>
+                                                
+                                            
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="bg-grey bg-darken-3 p-20 aione-align-center grey line-height-30">
+                                        <div>© Rate Your Lecture 2018. All Rights Reserved.</div>
+                                        <div>Privacy  |  Terms  |   FAQ</div>
+                                    </div>
+                                </div>
                             </div>
-                            <span class="like-icon"></span>
                         </div>
-                        <div class="star-rating" data-rating="3.5">
-                            <div class="rating-counter">(12 reviews)</div>
-                        </div>
-                    </a>
+                    </div>
                 </div>
-                <!-- Listing Item / End -->
-
-                <!-- Listing Item -->
-                <div class="carousel-item">
-                    <a href="listings-single-page.html" class="listing-item-container">
-                        <div class="listing-item">
-                            <img src="<?php echo e(asset('images/listing-item-02.jpg')); ?>" alt="">
-                            <div class="listing-item-details">
-                                <ul>
-                                    <li>Friday, August 10</li>
-                                </ul>
-                            </div>
-                            <div class="listing-item-content">
-                                <span class="tag">Events</span>
-                                <h3>Sticky Band</h3>
-                                <span>Bishop Avenue, New York</span>
-                            </div>
-                            <span class="like-icon"></span>
-                        </div>
-                        <div class="star-rating" data-rating="5.0">
-                            <div class="rating-counter">(23 reviews)</div>
-                        </div>
-                    </a>
-                </div>
-                <!-- Listing Item / End -->     
-
-                <!-- Listing Item -->
-                <div class="carousel-item">
-                    <a href="listings-single-page.html" class="listing-item-container">
-                        <div class="listing-item">
-                            <img src="<?php echo e(asset('images/listing-item-03.jpg')); ?>" alt="">
-                            <div class="listing-item-details">
-                                <ul>
-                                    <li>Starting from $59 per night</li>
-                                </ul>
-                            </div>
-                            <div class="listing-item-content">
-                                <span class="tag">Hotels</span>
-                                <h3>Hotel Govendor</h3>
-                                <span>778 Country Street, New York</span>
-                            </div>
-                            <span class="like-icon"></span>
-                        </div>
-                        <div class="star-rating" data-rating="2.0">
-                            <div class="rating-counter">(17 reviews)</div>
-                        </div>
-                    </a>
-                </div>
-                <!-- Listing Item / End -->
-
-                <!-- Listing Item -->
-                <div class="carousel-item">
-                    <a href="listings-single-page.html" class="listing-item-container">
-                        <div class="listing-item">
-                            <img src="<?php echo e(asset('images/listing-item-04.jpg')); ?>" alt="">
-
-                            <div class="listing-badge now-open">Now Open</div>
-
-                            <div class="listing-item-content">
-                                <span class="tag">Eat & Drink</span>
-                                <h3>Burger House <i class="verified-icon"></i></h3>
-                                <span>2726 Shinn Street, New York</span>
-                            </div>
-                            <span class="like-icon"></span>
-                        </div>
-                        <div class="star-rating" data-rating="5.0">
-                            <div class="rating-counter">(31 reviews)</div>
-                        </div>
-                    </a>
-                </div>
-                <!-- Listing Item / End -->
-
-                <!-- Listing Item -->
-                <div class="carousel-item">
-                    <a href="listings-single-page.html" class="listing-item-container">
-                        <div class="listing-item">
-                            <img src="<?php echo e(asset('images/listing-item-05.jpg')); ?>" alt="">
-                            <div class="listing-item-content">
-                                <span class="tag">Other</span>
-                                <h3>Airport</h3>
-                                <span>1512 Duncan Avenue, New York</span>
-                            </div>
-                            <span class="like-icon"></span>
-                        </div>
-                        <div class="star-rating" data-rating="3.5">
-                            <div class="rating-counter">(46 reviews)</div>
-                        </div>
-                    </a>
-                </div>
-                <!-- Listing Item / End -->
-
-                <!-- Listing Item -->
-                <div class="carousel-item">
-                    <a href="listings-single-page.html" class="listing-item-container">
-                        <div class="listing-item">
-                            <img src="<?php echo e(asset('images/listing-item-06.jpg')); ?>" alt="">
-
-                            <div class="listing-badge now-closed">Now Closed</div>
-
-                            <div class="listing-item-content">
-                                <span class="tag">Eat & Drink</span>
-                                <h3>Think Coffee</h3>
-                                <span>215 Terry Lane, New York</span>
-                            </div>
-                            <span class="like-icon"></span>
-                        </div>
-                        <div class="star-rating" data-rating="4.5">
-                            <div class="rating-counter">(15 reviews)</div>
-                        </div>
-                    </a>
-                </div>
-                <!-- Listing Item / End -->
-                </div>
-                
-            </div>
-
-        </div>
-    </div>
-
-</section>
-<!-- Fullwidth Section / End -->
-
-
-<!-- Info Section -->
-<div class="container">
-
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <h2 class="headline centered margin-top-80">
-                Plan The Vacation of Your Dreams 
-                <span class="margin-top-25">Explore some of the best tips from around the world from our partners and friends.  Discover some of the most popular listings in Sydney.</span>
-            </h2>
-        </div>
-    </div>
-
-    <div class="row icons-container">
-        <!-- Stage -->
-        <div class="col-md-4">
-            <div class="icon-box-2 with-line">
-                <i class="im im-icon-Map2"></i>
-                <h3>Find Interesting Place</h3>
-                <p>Proin dapibus nisl ornare diam varius tempus. Aenean a quam luctus, finibus tellus ut, convallis eros sollicitudin turpis.</p>
             </div>
         </div>
-
-        <!-- Stage -->
-        <div class="col-md-4">
-            <div class="icon-box-2 with-line">
-                <i class="im im-icon-Mail-withAtSign"></i>
-                <h3>Contact a Few Owners</h3>
-                <p>Maecenas pulvinar, risus in facilisis dignissim, quam nisi hendrerit nulla, id vestibulum metus nullam viverra porta purus.</p>
-            </div>
-        </div>
-
-        <!-- Stage -->
-        <div class="col-md-4">
-            <div class="icon-box-2">
-                <i class="im im-icon-Checked-User"></i>
-                <h3>Make a Reservation</h3>
-                <p>Faucibus ante, in porttitor tellus blandit et. Phasellus tincidunt metus lectus sollicitudin feugiat pharetra consectetur.</p>
-            </div>
-        </div>
-    </div>
-
-</div>
-<!-- Info Section / End -->
+    </div>  
+</body>
+</html>
 
 
-<!-- Recent Blog Posts -->
-<section class="fullwidth border-top margin-top-70 padding-top-75 padding-bottom-75" data-background-color="#fff">
-    <div class="container">
 
-        <div class="row">
-            <div class="col-md-12">
-                <h3 class="headline centered margin-bottom-45">
-                    From The Blog
-                </h3>
-            </div>
-        </div>
 
-        <div class="row">
-            <!-- Blog Post Item -->
-            <div class="col-md-4">
-                <a href="pages-blog-post.html" class="blog-compact-item-container">
-                    <div class="blog-compact-item">
-                        <img src="<?php echo e(asset('images/blog-compact')); ?>-post-01.jpg" alt="">
-                        <span class="blog-item-tag">Tips</span>
-                        <div class="blog-compact-item-content">
-                            <ul class="blog-post-tags">
-                                <li>22 August 2017</li>
-                            </ul>
-                            <h3>Hotels for All Budgets</h3>
-                            <p>Sed sed tristique nibh iam porta volutpat finibus. Donec in aliquet urneget mattis lorem. Pellentesque pellentesque.</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <!-- Blog post Item / End -->
-
-            <!-- Blog Post Item -->
-            <div class="col-md-4">
-                <a href="pages-blog-post.html" class="blog-compact-item-container">
-                    <div class="blog-compact-item">
-                        <img src="<?php echo e(asset('images/blog-compact')); ?>-post-02.jpg" alt="">
-                        <span class="blog-item-tag">Tips</span>
-                        <div class="blog-compact-item-content">
-                            <ul class="blog-post-tags">
-                                <li>18 August 2017</li>
-                            </ul>
-                            <h3>The 50 Greatest Street Arts In London</h3>
-                            <p>Sed sed tristique nibh iam porta volutpat finibus. Donec in aliquet urneget mattis lorem. Pellentesque pellentesque.</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <!-- Blog post Item / End -->
-
-            <!-- Blog Post Item -->
-            <div class="col-md-4">
-                <a href="pages-blog-post.html" class="blog-compact-item-container">
-                    <div class="blog-compact-item">
-                        <img src="<?php echo e(asset('images/blog-compact')); ?>-post-03.jpg" alt="">
-                        <span class="blog-item-tag">Tips</span>
-                        <div class="blog-compact-item-content">
-                            <ul class="blog-post-tags">
-                                <li>10 August 2017</li>
-                            </ul>
-                            <h3>The Best Cofee Shops In Sydney Neighborhoods</h3>
-                            <p>Sed sed tristique nibh iam porta volutpat finibus. Donec in aliquet urneget mattis lorem. Pellentesque pellentesque.</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <!-- Blog post Item / End -->
-
-            <div class="col-md-12 centered-content">
-                <a href="pages-blog.html" class="button border margin-top-10">View Blog</a>
-            </div>
-
-        </div>
-
-    </div>
-</section>
-<!-- Recent Blog Posts / End -->
-
-<?php $__env->stopSection(); ?>
-
-<?php echo $__env->make('admin.layouts.app', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

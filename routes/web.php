@@ -32,6 +32,7 @@ Route::group(['middleware'=>'admin'],function(){
 	Route::get('/teacher/edit/{id}',	['as'=>'teacher.edit',		'uses'=>'TeachersController@edit_teacher']);
 	Route::get('/teacher/ratings/{id}',	['as'=>'teacher.ratings',		'uses'=>'TeachersController@ratings_teacher']);
 	Route::post('/teacher/save',		['as'=>'teacher.save',		'uses'=>'TeachersController@save_teacher']);
+	Route::post('/teacher/update/{id}',		['as'=>'teacher.update',		'uses'=>'TeachersController@update_teacher']);
 	Route::get('/departments',			['as'=>'departments.list',	'uses'=>'DepartmentController@list_departments']);
 	Route::get('/department/add',		['as'=>'department.add',	'uses'=>'DepartmentController@add_department']);	
 	Route::get('/department/edit/{id}',	['as'=>'department.edit',	'uses'=>'DepartmentController@edit_department']);	

@@ -31,7 +31,7 @@
             	<?php $__currentLoopData = $model; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $teacher): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                 <tr>
                     <td class="py-1">
-                        <img src="../../images/faces-clipart/pic-1.png" alt="image">
+                        <img src="<?php echo e(asset('avatars/'.$teacher->pic)); ?>" alt="image">
                     </td>
                     <td>
                         <?php echo e($teacher->name); ?>

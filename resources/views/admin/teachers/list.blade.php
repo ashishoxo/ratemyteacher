@@ -32,7 +32,7 @@
             	@foreach($model as $teacher)
                 <tr>
                     <td class="py-1">
-                        <img src="../../images/faces-clipart/pic-1.png" alt="image">
+                        <img src="{{asset('avatars/'.$teacher->pic)}}" alt="image">
                     </td>
                     <td>
                         {{$teacher->name}}
