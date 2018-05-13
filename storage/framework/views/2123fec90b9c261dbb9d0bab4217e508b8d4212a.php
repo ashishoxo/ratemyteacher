@@ -62,9 +62,7 @@
         <li class="nav-item">
             <a class="nav-link" href="<?php echo e(route('my.teachers')); ?>"> <img class="menu-icon" src="<?php echo e(asset('assets/images/menu_icons/01.png')); ?>" alt="menu icon"> <span class="menu-title">My Teachers</span></a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" href="index.html"> <img class="menu-icon" src="<?php echo e(asset('assets/images/menu_icons/01.png')); ?>" alt="menu icon"> <span class="menu-title">Mobile Application</span></a>
-        </li> 
+       
         
     </ul>
 </nav>
