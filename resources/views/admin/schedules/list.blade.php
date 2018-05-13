@@ -12,21 +12,27 @@
 			<thead>
 				<tr>
 					<th>Schedule type</th>
+					<th>Date</th>
 					<th>Topic</th>
 					<th>Subject</th>
-					<th>Date</th>
 					<th>Time</th>
-					<th>teacher</th>
-					<th>company</th>
+					<th>teacher/company</th>
+					<th>Actions</th>
 				</tr>
 			</thead>
 			<tbody>
-				@foreach($schedules as $key => $value)
+				@foreach($schedules as $key => $values)
 				<tr>
-					<td>{{$value->schedule_type}}</td>
-					@foreach($value->meta as $key => $value)
-						<td>{{$value->value}}</td>
+					<td>{{$values->schedule_type}}</td>
+					<td>{{$values->date}}</td>
+					@foreach($values->meta as $key => $value)
+						@if($value->value != "" && $value->value != null)
+							<td>{{$value->value}}</td>
+						@endif
 					@endforeach
+					<td>
+						<a href="{{route('schedule.delete',$values->id)}}">Delete</a>
+					</td>
 				</tr>
 				@endforeach
 			</tbody>

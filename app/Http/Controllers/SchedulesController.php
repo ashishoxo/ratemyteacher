@@ -81,4 +81,10 @@ class SchedulesController extends Controller
         $model = Schedule::with(['meta','reviews'])->find($id);
         return view('student.classes.workshops.rate',['model'=>$model]);      
     }  
+    public function delete_schedule($id)
+    {
+        $model = Schedule::with(['meta','reviews'])->find($id);
+        $model->delete();
+        return redirect()->route('schedules.list');
+    }
 }

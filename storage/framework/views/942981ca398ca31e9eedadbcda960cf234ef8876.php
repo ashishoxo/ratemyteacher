@@ -11,21 +11,27 @@
 			<thead>
 				<tr>
 					<th>Schedule type</th>
+					<th>Date</th>
 					<th>Topic</th>
 					<th>Subject</th>
-					<th>Date</th>
 					<th>Time</th>
-					<th>teacher</th>
-					<th>company</th>
+					<th>teacher/company</th>
+					<th>Actions</th>
 				</tr>
 			</thead>
 			<tbody>
-				<?php $__currentLoopData = $schedules; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $value): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+				<?php $__currentLoopData = $schedules; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $values): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 				<tr>
-					<td><?php echo e($value->schedule_type); ?></td>
-					<?php $__currentLoopData = $value->meta; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $value): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-						<td><?php echo e($value->value); ?></td>
+					<td><?php echo e($values->schedule_type); ?></td>
+					<td><?php echo e($values->date); ?></td>
+					<?php $__currentLoopData = $values->meta; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $value): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+						<?php if($value->value != "" && $value->value != null): ?>
+							<td><?php echo e($value->value); ?></td>
+						<?php endif; ?>
 					<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+					<td>
+						<a href="<?php echo e(route('schedule.delete',$values->id)); ?>">Delete</a>
+					</td>
 				</tr>
 				<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 			</tbody>

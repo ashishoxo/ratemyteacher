@@ -39,7 +39,8 @@ Route::group(['middleware'=>'admin'],function(){
 	Route::post('/department/save',		['as'=>'department.save',	'uses'=>'DepartmentController@save_department']);
 	Route::get('/schedules',			['as'=>'schedules.list',	'uses'=>'SchedulesController@list_schedules']);
 	Route::get('/schedule/add',			['as'=>'schedule.add',		'uses'=>'SchedulesController@add_schedule']);
-	Route::get('/schedule/edit/{id}',	['as'=>'schedule.edit',		'uses'=>'SchedulesController@edit_schedule']);
+	Route::get('/schedule/delete/{id}',	['as'=>'schedule.delete',		'uses'=>'SchedulesController@delete_schedule']);
+
 	Route::post('/schedule/save',		['as'=>'schedule.save',		'uses'=>'SchedulesController@save_schedule']);
 	Route::get('/users',				['as'=>'users.list',		'uses'=>'UsersController@list_users']);
 	Route::get('/user/add',				['as'=>'user.add',			'uses'=>'UsersController@add_user']);	
