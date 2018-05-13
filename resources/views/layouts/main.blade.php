@@ -133,7 +133,7 @@
                         </li>
                     </ul>
                     <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
-                        <span class="icon-menu"></span>
+                        <span class="mdi mdi-menu"></span>
                     </button>
                 </div>
             </nav>
@@ -170,6 +170,7 @@
         
         
         <script src="{{asset('assets/js/dashboard.js')}}"></script>
+        <script src="{{asset('assets/js/off-canvas.js')}}"></script>
         
     </body>
 </html>

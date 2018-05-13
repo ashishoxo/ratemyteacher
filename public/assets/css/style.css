@@ -15326,7 +15326,7 @@ input:focus {
   .navbar.default-layout {
     flex-direction: row; }
     .navbar.default-layout .navbar-brand-wrapper {
-      width: 75px; }
+      width: 220px; }
       .navbar.default-layout .navbar-brand-wrapper .brand-logo {
         display: none; }
       .navbar.default-layout .navbar-brand-wrapper .brand-logo-mini {
