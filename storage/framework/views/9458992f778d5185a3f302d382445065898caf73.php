@@ -55,7 +55,7 @@
 			<!-- Right Side Content / End -->
 			<div class="right-side">
 				<div class="header-widget">
-					<a href="<?php echo e(route('admin.login')); ?>" class="sign-in popup-with-zoom-anim"><i class="sl sl-icon-login"></i> Sign In</a>
+					<a href="<?php echo e(route('login')); ?>" class="sign-in popup-with-zoom-anim"><i class="sl sl-icon-login"></i> Sign In</a>
 				</div>
 			</div>
 			<!-- Right Side Content / End -->

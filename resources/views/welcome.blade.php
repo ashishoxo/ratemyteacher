@@ -1,8 +1,6 @@
+@extends('admin.layouts.app')
+@section('content')
 
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
     <title>RATE MY TEACHER</title>
 
     
@@ -48,9 +46,14 @@
     border-color: #fdcc52;
     background-color: #fdcc52;
         }
+        .right-side{
+            margin-top: 10px;
+        }
+        .left-side{
+            width: 50%;
+        }
     </style>
-</head>
-<body>
+
     <div id="aione_wrapper" class="aione-wrapper page-home layout-header-top aione-layout-wide aione-theme-arcane position-relative">
         <div class="wrapper">
             
@@ -200,9 +203,8 @@
             </div>
         </div>
     </div>  
-</body>
-</html>
 
 
 
 
+@endsection

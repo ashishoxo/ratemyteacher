@@ -11,7 +11,7 @@
 
 
                         <div class="form-group<?php echo e($errors->has('email') ? ' has-error' : ''); ?>">
-                            <label for="email" class="col-md-4 control-label">E-Mail Address</label>
+                            <label for="email" class="col-md-4 control-label">Username / Roll no</label>
 
                             <div class="col-md-6">
                                 <input id="email" type="text" class="form-control" name="username" value="<?php echo e(old('email')); ?>" required autofocus>
